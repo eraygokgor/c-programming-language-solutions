@@ -5,19 +5,19 @@
 
 int main(void)
 {
-    int character;
-    int previous_character = EOF;
+    int ch;
+    int prev_ch = EOF;
 
-    while ((character = getchar()) != EOF) {
-    if (character == ' ' || character == '\t' || character == '\n') {
-        if (previous_character != ' ' && previous_character != '\t' && previous_character != '\n') {
+    while ((ch = getchar()) != EOF) {
+    if (ch == ' ' || ch == '\t' || ch == '\n') {
+        if (prev_ch != ' ' && prev_ch != '\t' && prev_ch != '\n') {
         putchar('\n');
         }
     }
     else {
-        putchar(character);
+        putchar(ch);
     }
 
-    previous_character = character;
+    prev_ch = ch;
     }
 }
